@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Калькулятор</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <ul id="navbar">
+    <li><a href="income.html">ДОХОДЫ</a></li>
+    <li><a href="expenses.html">РАСХОДЫ</a></li>
+    <li><a href="calculator.html">КАЛЬКУЛЯТОР</a></li>
+    <li><a href="#">ДИАГРАММЫ</a></li>
+    <li><a href="index.html">Выход</a></li>
+
+
+  </ul>
+  <div class="container">
+    <section class="calc_ausn" data-tax="ausn">
+
+      <div class="calc__wrapper">
+        <div class="calc__form-wrapper">
+          <form class="calc__form">
+            <div class="calc__radio-wrapper">
+              <label class="calc__label calc__label_radio">
+                <input class="calc__radio" type="radio" name="type" checked>
+                <span class="calc__text">6%</span>
+              </label>
+
+              <label class="calc__label calc__label_radio">
+                <input class="calc__radio" type="radio" name="type">
+                <span class="calc__text">15%</span>
+              </label>
+            </div>
+
+            <label class="calc__label calc__label_input">
+              <span class="calc__text">Доходы</span>
+              <input class="calc__input" type="number" name="a">
+            </label>
+
+            <label class="calc__label calc__label_input">
+              <span class="calc__text">Расходы</span>
+              <input class="calc__input" type="number" name="b">
+            </label>
+          </form>
+        </div>
+
+        <div class="calc__result result">
+          <h3 class="result__title">Результат</h3>
+
+          <div class="result__block">
+            <p class="result__caption">Налог</p>
+            <p class="result__tax">0</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="calc__reset">
+        <button class="calc__btn-reset" type="reset">Очистить</button>
+      </div>
+    </section>
+  </div>
+
+</body>
+
+</html>
