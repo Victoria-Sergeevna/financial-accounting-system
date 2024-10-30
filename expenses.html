@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,91 +10,64 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;700&display=swap" rel="stylesheet">
-
 </head>
+
 <body>
     <header>
-    <ul id="navbar">
-        <li><a href="income.html">ДОХОДЫ</a></li>
-        <li><a href="expenses.html">РАСХОДЫ</a></li>
-        <li><a href="calculator.html">КАЛЬКУЛЯТОР</a></li>
-        <li><a href="#">ДИАГРАММЫ</a></li>
-        <li><a href="index.html">Выход</a></li>
-      </ul>
+        <nav>
+            <ul id="navbar">
+                <li><a href="#"><img class="logo" src="icons/logo.svg" alt=""></a></li>
+                <li><a href="income.html">ДОХОДЫ</a></li>
+                <li><a href="expenses.html">РАСХОДЫ</a></li>
+                <li><a href="calculator.html">КАЛЬКУЛЯТОР</a></li>
+                <li><a href="diagrams.html">ДИАГРАММЫ</a></li>
+                <li><a href="index.html"><img class="exit" src="icons/exit.png" alt=""></a></li>
+            </ul>
+        </nav>
     </header>
+
     <section class="cms-main">
         <section class="cms-main__container">
-            <div class="cms-main__container__form">
+            <div class="cms-main__container__table-form">
+                <table class="cms-main__container__table-form__table" id="expenseTable">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>НАИМЕНОВАНИЕ</th>
+                            <th>КАТЕГОРИЯ</th>
+                            <th>ЕД/ИЗМ</th>
+                            <th>КОЛИЧЕСТВО</th>
+                            <th>ЦЕНА</th>
+                            <th>ИТОГ</th>
+                            <th>ДЕЙСТВИЯ</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
 
-                
-                <div class="cms-main__conatiner__form__filter">
-                    <button class="cms-main__container__form__filter__button"><img src="img/filter.svg" alt="фильтр" class="cms-main__form__filter-img">Фильтр</button>
+                        <tr id="addRow">
+                            <td></td>
+                            <td><input type="text" id="itemName" placeholder="Название" class="input-field"></td>
+                            <td><input type="text" id="itemCategory" placeholder="Категория" class="input-field"></td>
+                            <td><input type="text" id="itemUnit" placeholder="Единицы измерения" class="input-field">
+                            </td>
+                            <td><input type="number" id="itemQuantity" placeholder="Количество" class="input-field">
+                            </td>
+                            <td><input type="number" id="itemPrice" placeholder="Цена (р.)" class="input-field"></td>
+                            <td><button id="addButton" class="add-button">ДОБАВИТЬ</button></td>
+                        </tr>
+
+
+                    </tbody>
+                </table>
+
+                <div class="cms-main__container__table-form__foot">
+                    <p class="itog">ИТОГ: <span id="totalSum">0</span> р.</p>
                 </div>
-                <div class="cms-main__container__form__filter__text-input">
-                    <input placeholder="Поиск" type="text" class="cms-main__conatiner__form__input__field" alt="поиск">
-                    <img src="img/search.svg" alt="поиск" class="cms-main__container__form__input__icon">
-
-                </div>
-                <button class="cms-main__container__form__add-button">ДОБАВИТЬ</button>
-
-
             </div>
 
-            <section class="cms-main__conatiner__table-form">
-                <table class="cms-main__container__table-form__table">
-    
-                    <tr class="cms-main__container__table-form__table__row_tr">
-                        <th class="cms-main__container__table-form__table__row__head">ID</th>
-                        <th class="cms-main__container__table-form__table__row__head">НАИМЕНОВАНИЕ</th>
-                        <th class="cms-main__container__table-form__table__row__head">КАТЕГОРИЯ</th>
-                        <th class="cms-main__container__table-form__table__row__head">ЕД/ИЗМ</th>
-                        <th class="cms-main__container__table-form__table__row__head">КОЛИЧЕСТВО</th>
-                        <th class="cms-main__container__table-form__table__row__head">ЦЕНА</th>
-                        <th class="cms-main__container__table-form__table__row__head">ИТОГ</th>
-                        <th class="cms-main__container__table-form__table__row__head"></th>
-                        <th class="cms-main__container__table-form__table__row__head"></th>
-                        <th class="cms-main__container__table-form__table__row__head"></th>
-
-                    </tr>
-    
-                    <tr class="cms-main__container__table-form__table__row">
-                        <td class="cms-main__container__table-form__table__row__col-id">54516656</td>
-                        <td class="cms-main__container__table-form__table__row__col-name">Гель для умывания</td>
-                        <td class="cms-main__container__table-form__table__row__col-category">Закупка товара</td>
-                        <td class="cms-main__container__table-form__table__row__col-unit">шт</td>
-                        <td class="cms-main__container__table-form__table__row__col-amount">20</td>
-                        <td class="cms-main__container__table-form__table__row__col-price">150р</td>
-                        <td class="cms-main__container__table-form__table__row__col-sum">3000р</td>
-                        <td class="cms-main__container__table-form__table__row__col-edit"><img src="img/edit.svg" alt="изменение" class="cms-main__container__table-form__table__row__col-edit__icon"></td>
-                        <td class="cms-main__container__table-form__table__row__col-sum"></td>
-                        <td class="cms-main__container__table-form__table__row__col-sum"></td>
-                    </tr>
-
-                </table>
-    
-                <div class="cms-main__container__table-form__foot">
-                    <div class="cms-main__container__table-form__foot__nav"><div class="cms-main__table-foot__nav__prev"><button class="cms-main__table-foot__nav__prev__button"><img src="icons/prev.svg" alt="предыдущая"></button></div> <div class="cms-main__table-foot__nav__next"><button class="cms-main__table-foot__nav__next__button"><img src="icons/next.svg" alt="следующая"></button></div></div>
-                </div>
-    
-            </section>
         </section>
     </section>
-    <footer>
-        <div>
-            <strong><p class="itog">ИТОГ:0</p></strong>
-        </div>
-    </footer>
 
-   
-
-
-
-
-
-
-
-
-    
-    
 </body>
+
 </html>
