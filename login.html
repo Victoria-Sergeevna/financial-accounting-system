@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход в систему</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="p_login">Войдите в систему</h1>
+        <p class="p_login">И начинайте работать!</p>
+
+        <div class="form-container" id="loginForm">
+            <form id="form">
+                <strong><label for="username">Логин:</label></strong>
+                <input type="text" id="username" name="username" required>
+                <p id="usernameError" class="error"></p>
+
+                <strong><label for="password">Пароль:</label></strong>
+                <input type="password" id="password" name="password" required>
+                <p id="passwordError" class="error"></p>
+
+                <label class="remember-me">
+                    <input type="checkbox" id="rememberMe">
+                    <span class="checkmark"></span>
+                    Запомнить меня
+                </label>
+
+                <button type="submit" class="action-button">Войти</button>
+            </form>
+        </div>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Доходы</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul id="navbar">
+                <li><a href="#"><img class="logo" src="icons/logo.svg" alt=""></a></li>
+                <li><a href="#">ДОХОДЫ</a></li>
+                <li><a href="expenses.html">РАСХОДЫ</a></li>
+                <li><a href="calculator.html">КАЛЬКУЛЯТОР</a></li>
+                <li><a href="diagrams.html">ДИАГРАММЫ</a></li>
+                <li><a href="index.html"><img class="exit" src="icons/exit.png" alt=""></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="cms-main">
+        <section class="cms-main__container">
+            <div class="cms-main__container__table-form">
+
+                <table class="cms-main__container__table-form__table" id="incomeTable">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>НАИМЕНОВАНИЕ</th>
+                            <th>КАТЕГОРИЯ</th>
+                            <th>ЕД/ИЗМ</th>
+                            <th>КОЛИЧЕСТВО</th>
+                            <th>ЦЕНА</th>
+                            <th>ИТОГ</th>
+                            <th>ДЕЙСТВИЯ</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+
+                        <tr id="addRow">
+                            <td></td>
+                            <td><input type="text" id="itemName" placeholder="Название" class="input-field"></td>
+                            <td><input type="text" id="itemCategory" placeholder="Категория" class="input-field"></td>
+                            <td><input type="text" id="itemUnit" placeholder="Единицы измерения" class="input-field">
+                            </td>
+                            <td><input type="number" id="itemQuantity" placeholder="Количество" class="input-field">
+                            </td>
+                            <td><input type="number" id="itemPrice" placeholder="Цена (р.)" class="input-field"></td>
+                            <td><button id="addButton" class="add-button">ДОБАВИТЬ</button></td>
+                        </tr>
+
+
+                    </tbody>
+                </table>
+
+                <div class="cms-main__container__table-form__foot">
+                    <p class="itog">ИТОГ: <span id="totalSum">0</span> р.</p>
+                </div>
+            </div>
+
+        </section>
+    </section>
+</body>
+
+</html>
